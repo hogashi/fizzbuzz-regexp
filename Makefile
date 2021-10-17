@@ -7,4 +7,4 @@ all:
 	perl fizzbuzz-regexp.pl ${FROM} ${TO} > result.txt
 
 diff:
-	diff -s${OPTION} answer.txt result.txt
+	diff -s${OPTION} answer.txt result.txt || :
