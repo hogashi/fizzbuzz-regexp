@@ -1,12 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main(int argc, char** argv) {
-  int limit = 100;
+  int from, to;
   int i;
-  if (argc > 1) {
-    limit = atoi(argv[1]);
+  if (argc < 3) {
+    printf("from/to required\n");
+    return 1;
   }
-  for (i = 1; i <= limit; i++) {
+
+  from = atoi(argv[1]);
+  to = atoi(argv[2]);
+  for (i = from; i <= to; i++) {
     if (i % 3 == 0) {
       printf("Fizz");
     }

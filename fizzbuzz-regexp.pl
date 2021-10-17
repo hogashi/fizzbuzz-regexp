@@ -2,9 +2,13 @@ use strict;
 use warnings;
 use utf8;
 
-my $limit = $ARGV[0] || 100;
+my $from = $ARGV[0];
+my $to = $ARGV[1];
 
-for my $i (1 .. $limit) {
+die 'from required' unless $from;
+die 'to required' unless $to;
+
+for my $i ($from .. $to) {
     # どの順で適用しても大丈夫なようにそれぞれ独立に書いている
     # TODO: まだおかしい場合がある
 
