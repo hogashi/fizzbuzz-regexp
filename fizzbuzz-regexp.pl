@@ -5,8 +5,8 @@ use utf8;
 my $from = $ARGV[0];
 my $to = $ARGV[1];
 
-die 'from required' unless $from;
-die 'to required' unless $to;
+die 'from required' unless defined $from;
+die 'to required' unless defined $to;
 
 for my $i ($from .. $to) {
     # どの順で適用しても大丈夫なようにそれぞれ独立に書いている
